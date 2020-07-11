@@ -29,7 +29,6 @@ child.stdout.on('data', function (data) {
     var parsedData = JSON.parse(data.toString());
     res.send(parsedData);
 });
-
 child.on('close', function (code) {
     if (code !== 0) {
         console.log('an error has occurred');
