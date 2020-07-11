@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Demand Prediction</title>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/IBM.css">
+  </head>
+  <body>
+    <section class="colored-section" id="title">
+
+      <div class="container-fluid">
+
+    <nav class="navbar navbar-expand-lg navbar-dark">
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+
+        <ul class="navbar-nav  ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#main-page">Predict</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#features">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#feedback">Feedback</a>
+          </li>
+          <li class="nav-item">
+            <a  class="nav-link" href="#warehouse">Representation</a>
+          </li>
+        </ul>
+
+      </div>
+    </nav>
+
+
+    <div class="row">
+
+      <div class="col-lg-6">
+        <h1 class="big-heading">Warehouse Management</h1>
+
+      </div>
+      <div class="col-lg-6">
+        <img class="title-image" src="https://p1-cms-assets-acbm.imgix.net/files/base/acbm/fl/image/2018/11/food_warehouse.5be5c265da5e8.png?auto=format&fit=crop&h=288&w=512" alt="Humanity is above all religions" height="300px" width="300px">
+      </div>
+    </div>
+    </section>
+    <section class="white-section" id="features">
+
+      <div class="container-fluid">
+
+        <div class="row">
+          <div class="feature-box col-lg-4">
+
+            <h3 class="feature-title">We Rise By Lifting Others</h3><br>
+            <img  class="feature-images"src="https://resize.indiatvnews.com/en/resize/newbucket/715_-/2020/03/save2-1585661491.jpg" alt="Sharing is Caring" height="150px" width="200px">
+            <p>Complete availabality of food will be there,and wastage will be negligible.</p>
+          </div>
+
+          <div class="feature-box col-lg-4">
+
+            <h3 class="feature-title">Impact on Business</h3><br>
+            <img class="feature-images"src="https://m.hindustantimes.com/rf/image_size_444x250/HT/p2/2020/04/27/Pictures/_c5777ffe-887f-11ea-804e-137f71f5151d.jpg" alt="Spread Happiness"height="150px" width="200px">
+           <p>Allows suppliers and retailers to effectively address weather-associated surges and drops in local demand.</p>
+          </div>
+
+          <div class="feature-box col-lg-4">
+
+            <h3 class="feature-title">Demand sensing solutions</h3><br>
+            <img class="feature-images"src="https://www.ironsystems.com/sites/default/files/what-we-do/supply-chain-management.jpg" alt="Supply always comes on the heels of Demand "height="150px" width="200px">
+            <p>It empowers companies to rapidly address sudden changes in customer needs and facilitates building a data-driven supply chain.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+<section class="colored-section" id="main-page">
+
+    <div class="First-part">
+    <h1>Demand Prediction</h1>
+    <p>Warehouse Management</p>
+    </div>
+    <div class="Main-work">
+    <form action="/demand" method="post">
+    <label>Enter the region</label>
+      <input type="text" name="">
+      <br><br>
+      <label>Enter the Item </label>
+       <input type="text" name="" >
+      <br>
+      <button  class="btn-btn-dark" type="submit" name="submit">Demand</button>
+      <br><br>
+    </form>
+    <h5>Your Trust is our Responsibility.</h5>
+    </div>
+</section>
+
+    <footer class="white-section" id="feedback">
+      <div class="container-fluid">
+      <h1>"We all need people who will give us feedback. That’s how we improve."</h1>
+      <form  action="/feedback" method="post">
+        <label>Email Address</label>
+        <input type="email" name="email" id="email">
+        <br>
+        <label>Your Feedback</label>
+        <input type="text" name="review" id="review">
+        <br>
+        <button type="submit" class="btn btn-secondary">Submit</button>
+      </form>
+      </div>
+    </footer>
+
+<section class="colored-section">
+  <h1>Graphical Representation</h1>
+    <div id="warehouse" class="carousel slide" data-ride="false">
+      <ul class="carousel-indicators">
+    <li data-target="#warehouse" data-slide-to="0" class="active"></li>             
+    <li data-target="#warehouse" data-slide-to="1"></li>
+    <li data-target="#warehouse" data-slide-to="2"></li>
+    </ul>
+      <div class="carousel-inner">
+        <div class="carousel-item active container-fluid">
+          <img class="warehouse-image" src="/61f0ea78-668f-4ce5-a951-aaa6a929bcea.jpg" alt="Food Delivery Company">
+        </div>
+        <div class="carousel-item container-fluid">
+          <img class="warehouse-image" src="/1bbb2bbe-0d2a-4f8b-8416-313f3150d1b6.jpg" alt="Supply comes on the heels of demand">
+        </div>
+        <div class="carousel-item container-fluid">
+          <img  class="warehouse-image"src="/62559ea4-b033-427f-ae59-71b7e86d73f9.jpg" alt="">
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#warehouse" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+      </a>
+      <a class="carousel-control-next" href="#warehouse" role="button" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+      </a>
+    </div>
+</section>
+
+  </body>
+</html>
