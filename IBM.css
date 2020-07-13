@@ -2,8 +2,11 @@ body {
   font-family: "Montserrat";
   text-align: center;
 }
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h5, h6 {
   font-family: "Montserrat-Bold";
+}
+h4{
+  color: #84a9ac;
 }
 p {
   color: #8f8f8f;
@@ -31,6 +34,7 @@ p {
   font-size: 3rem;
   line-height: 1.5;
 }
+
 .container-fluid{
   padding: 7% 15%;
 }
@@ -66,8 +70,11 @@ p {
   padding: 100px;
 }
 #features {
-  padding: 80px;
+  padding: 50px;
   align-items: center;
+}
+.top_button{
+  float: right;
 }
 @media (max-width: 1028px) {
   #title {
@@ -84,5 +91,5 @@ p {
     font-size: 1.5rem;
   }
   .feature-box {
-    padding: 4.5%;
+    padding: 3.5%;
   }
