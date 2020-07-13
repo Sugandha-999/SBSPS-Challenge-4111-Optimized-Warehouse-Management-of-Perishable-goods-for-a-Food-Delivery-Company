@@ -4,3 +4,16 @@ scikit-learn>=0.18
 matplotlib>=1.4.3
 pandas>=0.19
 catboost>=0.23.2
+install node js and install npm packages: bodyparser,
+body-parser: ^1.19.0,
+    express : ^4.17.1,
+    express-validator : ^6.6.0,
+    mongoose : ^5.9.21,
+python-shell : ^2.0.1
+encodeurl : 1.0.2
+escape-html : 1.0.3
+finalhandler : 1.1.2
+follow-redirects : 1.12.1
+inherits : 2.0.3
+mongodb : 3.5.9
+All packages will be installed as installation process of node js starts
