@@ -6,9 +6,6 @@
  const mongoose = require("mongoose");
  var path= require("path");
  const port= 3000;
-
-const {spawn} = require('child_process');
-//var py= spawn('python',['compute final_solution.ipynb']);
 //var dbcon=mongodb.MongoClient.connect("mongodb://localhost:27017/ibm");
 var db=mongoose.connection;
 db.on('error', console.log.bind(console, "connection error"));
@@ -18,21 +15,7 @@ db.once('open', function(callback){
  app.use(bodyparser.urlencoded({extended:true}));
 
  mongoose.connect("mongodb://localhost:27017/ibm",{useNewUrlParser: true});
-//Connect to python Machine learning mode
 
-app.post("/demand",function(req,res){
-  const {PythonShell} = require('python-shell');
-
- PythonShell.run('final_solution.py', {args:[center_id , meal_id , week , base_price , checkout_price , emailer_for_promotion , homepage_featured] }, function (err, results) {
-   if (err) throw err;
-   console.log('finished');
-   res.send(results);
-   console.log("done");
-});
-return res.redirect("/");
-});
-
-//Connect to python Machine learning mode
  app.use(express.static(__dirname + "/public"));
 
  app.listen(3000, function(){
@@ -41,6 +24,22 @@ return res.redirect("/");
  app.get("/",function(req,res){
    res.sendFile(__dirname + "/IBM.html");
  });
+
+ //Connect to python Machine learning mode
+ app.post("/demand",function(req,res){
+const {PythonShell} = require('python-shell');
+
+ PythonShell.run('final_solution.py', {args:[center_id , id , meal_id , week , base_price , checkout_price , emailer_for_promotion , homepage_featured] }, function (err, results) {
+   if (err) throw err;
+   console.log('finished');
+   res.send(results);
+   console.log("done");
+});
+
+ return res.redirect("/");
+ });
+
+ //Connect to python Machine learning mode
 
 app.post("/feedback",function(req,res){
   var mail= req.body.email;
@@ -65,5 +64,6 @@ app.post("/feedback",function(req,res){
 //mongoose.connect("mongodb://localhost:27017/ibm",{useNewUrlParser: true});
 //read the data from dtabase
 //mongoose.connection.close();
+
 
 
