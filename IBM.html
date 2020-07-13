@@ -15,14 +15,15 @@
   </head>
   <body>
     <section class="colored-section" id="title">
+
       <div class="container-fluid">
 
-    <nav class="navbar navbar-expand-lg navbar-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top"">
 
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02">
           <span class="navbar-toggler-icon"></span>
       </button>
-
+<a name= "top "></a>
       <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
 
         <ul class="navbar-nav  ml-auto">
@@ -43,20 +44,22 @@
       </div>
     </nav>
 
-
     <div class="row">
-
       <div class="col-lg-6">
         <h1 class="big-heading">Warehouse Management</h1>
-
       </div>
       <div class="col-lg-6">
         <img class="title-image" src="https://p1-cms-assets-acbm.imgix.net/files/base/acbm/fl/image/2018/11/food_warehouse.5be5c265da5e8.png?auto=format&fit=crop&h=288&w=512" alt="Humanity is above all religions" height="300px" width="300px">
       </div>
     </div>
     </section>
-    <section class="white-section" id="features">
 
+    <section class="white-section" id="features">
+      <h1>
+        <button class=" top_button btn btn-light" onclick= "location.href='#top';">
+           Home page
+         </button>
+      </h1>
       <div class="container-fluid">
 
         <div class="row">
@@ -82,47 +85,53 @@
             </p>
           </div>
         </div>
-
       </div>
     </section>
 
 <section class="colored-section" id="main-page">
-
     <div class="First-part">
-    <h1>Demand Prediction</h1>
-    <p>Warehouse Management</p>
+    <h1>Demand Prediction
+      <button class=" top_button btn btn-dark" onclick= "location.href='#top';">
+         Home page
+       </button></h1>
+  <h4>Click on the given link to get the demand of the next 10 weeks </h4>
+   <button type= "button" class=" btn btn-primary" onclick= "location.href='/ibm.png'">Prediction</button>
+   <br>
+   <h4>To download the complete file.</h4>
+  <button type="button" class=" btn btn-dark " onclick="location.href='https://docs.google.com/spreadsheets/d/e/2PACX-1vQXY3GXKysh9aDhsvkpHw2aSGVf93EdrhecsI0Aio6y2AgwUgP_Qd2fb0JR79xXeaPLIhyYr-zYX8_d/pub?output=xlsx';" name="button">Download</button>
+    <hr>
     </div>
-    <div class="Main-work">
-    <form action="/demand" method="post">
-   <label>center_id</label>
-      <input type="text" name="">
-      <br><br>
-      <label>meal_id </label>
-       <input type="text" name="" >
-      <br><br>
-      <label>week</label>
-        <input type="text" name="">
-        <br><br>
-        <label>base_price</label>
-          <input type="text" name="">
-          <br><br>
-        <label>checkout_price</label>
-          <input type="text" name="">
-            <br><br>
-      <label>emailer_for_promotion</label>
-          <input type="text" name="">
-          <br><br>
-        <label>homepage_featured</label>
-          <input type="text" name="">
-          <br><br>
-      <button  class="btn-btn-dark" type="submit" name="submit">Demand</button>
-      <br><br>
-    </form>
-    <h5>Your Trust is our Responsibility.</h5>
-    </div>
+
+    <h1>Graphical Representation of Result</h1>
+      <div id="results" class="carousel slide" data-ride="false">
+        <ul class="carousel-indicators">
+      <li data-target="#results" data-slide-to="0" class="active"></li>
+      <li data-target="#results" data-slide-to="1"></li>
+      </ul>
+        <div class="carousel-inner">
+          <div class="carousel-item active container-fluid">
+            <img class="result-image" src="/WhatsApp Image 2020-07-13 at 3.56.24 PM.jpeg " alt="No.of orders VS weeks">
+            <h2>No. of orders VS Weeks</h2>
+          </div>
+          <div class="carousel-item container-fluid">
+            <img class="result-image" src="/WhatsApp Image 2020-07-13 at 3.55.46 PM.jpeg" alt=" importance of Features used in ML model">
+            <h2>Importance of features used in Prediction</h2>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#results" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#results" role="button" data-slide="next">
+      <span class="carousel-control-next-icon"></span>
+        </a>
+      </div>
+
 </section>
 
     <footer class="white-section" id="feedback">
+      <h1><button class=" top_button btn btn-light" onclick= "location.href='#top';">
+           Home page
+         </button></h1>
       <div class="container-fluid">
       <h1>"We all need people who will give us feedback. That’s how we improve."</h1>
       <form  action="/feedback" method="post">
@@ -138,10 +147,13 @@
     </footer>
 
 <section class="colored-section">
-  <h1>Graphical Representation</h1>
+  <h1>Graphical Analysis
+  <button class=" top_button btn btn-dark" onclick= "location.href='#top';">
+     Home page
+   </button></h1>
     <div id="warehouse" class="carousel slide" data-ride="false">
       <ul class="carousel-indicators">
-    <li data-target="#warehouse" data-slide-to="0" class="active"></li>             
+    <li data-target="#warehouse" data-slide-to="0" class="active"></li>
     <li data-target="#warehouse" data-slide-to="1"></li>
     <li data-target="#warehouse" data-slide-to="2"></li>
     </ul>
@@ -164,6 +176,5 @@
       </a>
     </div>
 </section>
-
   </body>
 </html>
