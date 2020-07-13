@@ -23,7 +23,7 @@ db.once('open', function(callback){
 app.post("/demand",function(req,res){
   const {PythonShell} = require('python-shell');
 
- PythonShell.run('final_solution.py', {args:[center_id , meal_id , week , base_price , checkout_price] }, function (err, results) {
+ PythonShell.run('final_solution.py', {args:[center_id , meal_id , week , base_price , checkout_price , emailer_for_promotion , homepage_featured] }, function (err, results) {
    if (err) throw err;
    console.log('finished');
    res.send(results);
