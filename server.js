@@ -19,22 +19,16 @@ db.once('open', function(callback){
 
  mongoose.connect("mongodb://localhost:27017/ibm",{useNewUrlParser: true});
 //Connect to python Machine learning mode
+
 app.post("/demand",function(req,res){
-  var spawn = require('child_process').spawn;
+  const {PythonShell} = require('python-shell');
 
-var child = spawn('python', ['final_solution.py']);
-
-child.stdout.on('data', function (data) {
-    console.log("Data send to server");
-    var parsedData = JSON.parse(data.toString());
-    res.send(parsedData);
+ PythonShell.run('final_solution.py', {args:[center_id , meal_id , week , base_price , checkout_price] }, function (err, results) {
+   if (err) throw err;
+   console.log('finished');
+   res.send(results);
+   console.log("done");
 });
-child.on('close', function (code) {
-    if (code !== 0) {
-        console.log('an error has occurred');
-    }
-});
-
 return res.redirect("/");
 });
 
@@ -71,24 +65,5 @@ app.post("/feedback",function(req,res){
 //mongoose.connect("mongodb://localhost:27017/ibm",{useNewUrlParser: true});
 //read the data from dtabase
 //mongoose.connection.close();
-//var dataToSend;
-// spawn new child process to call the python script
-//const python = spawn('python', ['final_solution.py']);
-// collect data from script
-// in close event we are sure that stream from child process is closed
-//python.on('close', (code){
-//console.log(`child process close all stdio with code ${code}`);
-// send data to browser
-//python.stdout.on('data', function (data) {
-  //console.log('Pipe data from python script ...');
-  //dataToSend = data.toString();
- //});
 
-//res.sendFile(__dirname + "/final_solution.py");
-//res.send("Demand");
-//console.log("Got the call");
-//python.on('close', (code) => {
- //console.log(`child process close all stdio with code ${code}`);
- // send data to browser
- //res.send(dataToSend)
- //});
+
